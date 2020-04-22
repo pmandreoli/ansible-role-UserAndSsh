@@ -10,7 +10,7 @@ Any pre-requisites that may not be covered by Ansible itself or the role should 
 Role Variables
 --------------
 ``username``: set username
-``GUID``: set user GUID, if you do not want to set a specific GUID for the user omit it in the playbook
+``GUID``: set user GUID, if you do not want to set a specific GUID for the user omit it, the role will assign it randomly > 1000
 ``ssh_key``: public key for the user
 ``present``: bool, if you want to set the key
 
