@@ -19,7 +19,7 @@
    with_items: "{{ ssh_user }}"
    when: ansible_os_family == "Debian"
 
- - name: Set authorized key taken from file
+ - name: Set authorized key if it is present 
    authorized_key:
      user: "{{ item.name }}"
      state: present   
