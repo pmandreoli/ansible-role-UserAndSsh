@@ -9,8 +9,10 @@ Any pre-requisites that may not be covered by Ansible itself or the role should 
 
 Role Variables
 --------------
-
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+``username``: set username
+``GUID``: set user GUID, if you do not want to set a specific GUID for the user omit it in the playbook
+``ssh_key``: public key for the user
+``present``: bool, if you want to set the key
 
 Dependencies
 ------------
@@ -29,8 +31,8 @@ Including an example of how to use your role (for instance, with variables passe
   become: yes
   vars:
     ssh_user: 
-      - { name: "usename", GUID: "<uid>", ssh_key: "ssh-key.pub", present: "yes" }
-      - { name: "usename", GUID: "<uid>", ssh_key: "ssh-key.pub", present: "yes" }
+      - { name: "username", GUID: "<uid>", ssh_key: "ssh-key.pub", present: "yes" }
+      - { name: "username", ssh_key: "ssh-key.pub", present: "yes" }
   roles:
     - { role:  <role-path> }
 
