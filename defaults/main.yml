@@ -1,2 +1,12 @@
 ---
+#________________________________
+#user default
+
+ssh_user: 
+  - { name: "galaxy", GUID: "4001", ssh_key: "{{ galaxy_instance_key_pub }}", present: "yes" }
+
+#________________________________
+# Default galaxy ssh key for orchestrator
+
+galaxy_instance_key_pub: ""
 
